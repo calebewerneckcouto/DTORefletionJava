@@ -56,3 +56,20 @@ Suporte a transformação reversa (DTO → Entidade)
 
 Substituir por bibliotecas como ModelMapper ou MapStruct para maior performance e legibilidade
 
+🧾 Serialização com ObjectToJson
+A classe ObjectToJson transforma qualquer objeto Java em uma string JSON formatada, utilizando reflexão para acessar os campos privados.
+
+Exemplo de uso:
+Pessoa pessoa = new Pessoa(1, "Calebe", "12345");
+ObjectToJson objectToJson = new ObjectToJson();
+System.out.println(objectToJson.transform(pessoa));
+
+Saída esperada:
+
+{
+  "id": 1,
+  "nome": "Calebe",
+  "cpf": "12345"
+}
+
+
